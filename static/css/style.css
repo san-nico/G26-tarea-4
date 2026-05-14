@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d1320;
+  color: #eaf2f8;
+}
+
+/* titulo */
+h1 {
+  margin: 0 0 50px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e8f9ff;
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 20px #00e5ff,
+    0 0 40px #0099ff,
+    0 0 80px #0066ff;
+  animation: parpadeo 3s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 45%, 55%, 100% {
+    text-shadow:
+      0 0 5px #00e5ff,
+      0 0 10px #00e5ff,
+      0 0 20px #00e5ff,
+      0 0 40px #0099ff,
+      0 0 80px #0066ff;
+  }
+  50% {
+    text-shadow: 0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 10px #0099ff;
+    opacity: 0.85;
+  }
+}
+
+/* grilla */
+.armamento {
+  max-width: 1150px;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* tarjeta */
+.weapon-card {
+  flex: 1 1 280px;
+  max-width: 360px;
+  background: #131c2a;
+  border: 1px solid #1f2c3d;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.weapon-card:hover {
+  transform: translateY(-4px);
+  border-color: #00e5ff;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+}
+
+/* rarezas */
+.weapon-card--comun {
+  border-top: 5px solid #8a99a8;
+}
+.weapon-card--rara {
+  border-top: 5px solid #00bfff;
+}
+.weapon-card--epica {
+  border-top: 5px solid #b000ff;
+}
+
+.weapon-card--rara:hover {
+  border-color: #00bfff;
+  box-shadow: 0 0 22px rgba(64, 156, 255, 0.6);
+}
+
+.weapon-card--epica:hover {
+  border-color: #b000ff;
+  box-shadow: 0 0 25px rgba(176, 0, 255, 0.65);
+}
+
+.weapon-card__header {
+  padding: 18px;
+  text-align: center;
+}
+
+/* imagen arma */
+.weapon-card__image {
+  height: 220px;
+  background: #0b1320;
+  border: 1px solid #1f2c3d;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weapon-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.weapon-card__title {
+  margin: 0;
+  font-size: 14px;
+  color: #8fa9b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.weapon-card__name {
+  display: block;
+  margin-top: 5px;
+  font-size: 20px;
+  color: #00e5ff;
+}
+
+.weapon-card__body {
+  padding: 0 18px 18px;
+  flex: 1;
+}
+
+/* stats */
+.weapon-stats__list {
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.weapon-stats__item {
+  width: calc(50% - 4px);
+  background: #0f1825;
+  border: 1px solid #1f2c3d;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.weapon-stats__label {
+  display: block;
+  font-size: 11px;
+  color: #7f98a8;
+  text-transform: uppercase;
+}
+
+.weapon-stats__value {
+  display: block;
+  margin-top: 2px;
+  font-weight: bold;
+}
+
+/* mods */
+.weapon-mods__title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #00e5ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.weapon-mods__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.weapon-mods__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: #0f1825;
+  border: 1px solid #1f2c3d;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.weapon-mods__value {
+  font-weight: bold;
+  color: #00e5ff;
+}
+
+.weapon-mods__item--empty {
+  justify-content: center;
+  color: #718694;
+  font-style: italic;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+  }
+}
