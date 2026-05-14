@@ -1,0 +1,42 @@
+/* COMÚN */
+.weapon-card {
+    --gradient-base: #301e48;
+
+    background:
+        linear-gradient(
+            45deg,
+            var(--gradient-inicio),
+            var(--gradient-fin)
+        ),
+        url("../img/fondos/fondo-card.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    border: 2px var(--gradient-fin) solid;
+    border-top: 10px var(--gradient-fin) solid;
+}
+
+
+
+.weapon-card--comun {
+    --gradient-inicio: var(--gradient-base);
+    --gradient-fin: var(--gradient-inicio);
+
+}
+
+/* RARA */
+.weapon-card--rara {
+    --gradient-inicio: var(--gradient-base);
+    --gradient-fin: #00b30faa;
+
+}
+
+/* ÉPICA */
+.weapon-card--epica {
+    --gradient-inicio: var(--gradient-base);
+    --gradient-fin: #cc8400aa;
+
+}
