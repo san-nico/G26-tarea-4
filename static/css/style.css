@@ -124,13 +124,11 @@ gap:1rem;
 .armamento {
     margin: auto;
     max-width: 1300px;
-
-    align-items:start;
+    align-items: stretch;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 25rem));
     gap: 1rem;
-
 }
 
 /* tarjeta */
