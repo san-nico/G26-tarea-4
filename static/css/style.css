@@ -32,17 +32,23 @@ html {
 
 body {
 
-      font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
+font-family: "Mulish", sans-serif;
 
-    font-style: normal;
-    font-size: var(--fs-3);
-    background: #0d1320;
-    color: #eaf2f8;
+font-optical-sizing: auto;
 
-    display:flex;
-    flex-direction:column;
-    gap:1rem;
+font-style: normal;
+
+font-size: var(--fs-3);
+
+background: #0d1422;
+
+color: #eaf2f8;
+
+display:flex;
+
+flex-direction:column;
+
+gap:1rem;
 }
 
 /* titulo */
@@ -117,12 +123,12 @@ body {
 /* grilla */
 .armamento {
     margin: auto;
-    max-width: 1200px;
+    max-width: 1300px;
 
     align-items:start;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 22rem));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 25rem));
     gap: 1rem;
 
 }
@@ -132,15 +138,35 @@ body {
     color:var(--texto-1);
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
+    display: grid;
+    grid-template-areas:
+        "title title"
+        "image stats"
+        "mods mods"
+    ;
     align-items:center;
-    gap:1rem;
+    gap:2rem;
     padding: 1rem 1.5rem;
     /* gap: 0rem; */
     flex-direction: column;
     transition: 0.3s;
 }
+/* variedad en el display de las imagenes */
+.weapon-card:nth-child(2n) img {
+  transform: rotate(-30deg);
+}
+.weapon-card:nth-child(5n) img {
+    filter: hue-rotate(170deg);
+}
+.weapon-card:nth-child(3n) img {
+      transform: scale(-1, 1);
+}
+.weapon-card:nth-child(7n) img {
+    transform: scale(0.8);
+}
+  transform: scale(1.1);
 
+/* subelementos de la card */
 .weapon-card:hover {
     transform: translateY(-4px);
     border-color: #00e5ff;
@@ -157,12 +183,11 @@ body {
 
 .weapon-card__img {
     width: 100%;
-    filter:
-
-
+    grid-area: image;
 }
 
 .weapon-card__title {
+    grid-area: title;
     overflow: hidden;
     text-align: center;
     font-size: var(--fs-2);
@@ -181,8 +206,11 @@ body {
 
 .weapon-stats {
 
-    padding: .5rem;
-    border-radius: .5rem;
+grid-area: stats;
+
+padding: .5rem;
+
+border-radius: .5rem;
 }
 
 /* stats */
@@ -222,8 +250,7 @@ body {
 /* mods */
 .weapon-mods{
       width: 100%;
-
-    
+      grid-area: mods;
 }
 .weapon-mods__list{
     display:flex;
@@ -243,6 +270,7 @@ body {
 
 
 .weapon-mods__item {
+    color:#57ff57;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -253,6 +281,7 @@ body {
     padding: .4rem 1rem;
     border-radius: .5rem;
     font-size: var(--fs-2);
+    text-transform:capitalize;
 }
 
 .weapon-mods__value {
