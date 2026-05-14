@@ -119,6 +119,7 @@ body {
     margin: auto;
     max-width: 1200px;
 
+    align-items:start;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 22rem));
@@ -228,7 +229,7 @@ body {
     display:flex;
     flex-direction:column;
     gap:.5rem;
-    height:8rem;
+
 }
 .weapon-mods__title {
     margin: 0 0 10px;
