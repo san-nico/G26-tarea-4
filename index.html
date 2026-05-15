@@ -1,2331 +1,1949 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Armamento recolectado</title>
-  <link rel="stylesheet" href="static/css/style.css">
-  <script: src="static/js/script.js" defer></script>
+  <link href="static/css/style.css" rel="stylesheet" />
+  <link href="static/css/rarezas.css" rel="stylesheet" />
+  <script defer="" src="static/js/scripts.js"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&amp;family=Oswald:wght@200..700&amp;display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
-  <h1>Armamento encontrado en el cofre del tesoro:</h1>
+  <h1 class="titulo">Inventario de armamento</h1>
+
+  <section class="navegacion">
+    <ul class="opciones">
+      <li class="opciones__item opciones__item--active" id="opcion__comun">Común</li>
+      <li class="opciones__item opciones__item--active" id="opcion__raro">Raro</li>
+      <li class="opciones__item opciones__item--active" id="opcion__epico">Épico</li>
+    </ul>
+  </section>
   <section class="armamento">
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/martillo.png" alt="arma tipo martillo llamada Martillo basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Martillo basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">martillo</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">23</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">51</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">57</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+velocidad ataque %</span>
-              <span class="weapon-mods__value">10</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Martillo</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo martillo llamada Martillo" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/martillo.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">martillo</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">23</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">51 - 57</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% velocidad ataque</span>
+            <span class="weapon-mods__value">10</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/lanza.png" alt="arma tipo lanza llamada Lanza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Lanza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">lanza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">20</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Lanza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo lanza llamada Lanza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/lanza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">lanza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">2</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">2 - 3</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">20</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/espada.png" alt="arma tipo espada llamada Espada basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Espada basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">espada</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">6</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">11</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Espada</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo espada llamada Espada" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/espada.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">espada</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">6</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">9 - 11</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/arco.png" alt="arma tipo arco llamada Arco basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Arco basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">arco</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">4</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">8</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Arco</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo arco llamada Arco" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/arco.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">arco</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">3</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">3 - 4</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">8</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/arco.png" alt="arma tipo arco llamada Arco basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Arco basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">arco</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">7</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">7</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">8</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">2</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Arco</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo arco llamada Arco" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/arco.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">arco</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">7</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">7 - 8</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">2</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/katana.png" alt="arma tipo katana llamada Katana basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Katana basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">katana</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">6</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">12</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Katana</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo katana llamada Katana" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/katana.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">katana</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">6</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">10 - 12</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/katana.png" alt="arma tipo katana llamada Katana basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Katana basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">katana</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">25</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">53</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">61</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">5</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">10</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Katana</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo katana llamada Katana" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/katana.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">katana</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">25</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">53 - 61</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">5</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">10</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--epica">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/maza.png" alt="arma tipo maza llamada sombrio Maza del destino"
-            class="weapon-card__img" loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">sombrio Maza del destino</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">maza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">epica</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">37</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">74</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">89</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">8</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+velocidad ataque %</span>
-              <span class="weapon-mods__value">11</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">sombrio Maza del destino</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo maza llamada sombrio Maza del destino" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/maza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">maza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">epica</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">37</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">74 - 89</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">8</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% velocidad ataque</span>
+            <span class="weapon-mods__value">11</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/arco.png" alt="arma tipo arco llamada Arco basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Arco basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">arco</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">7</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">7</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">8</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Arco</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo arco llamada Arco" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/arco.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">arco</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">7</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">7 - 8</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/ballesta.png" alt="arma tipo ballesta llamada Ballesta basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Ballesta basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">ballesta</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">18</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">32</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">36</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">1</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Ballesta</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo ballesta llamada Ballesta" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/ballesta.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">ballesta</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">18</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">32 - 36</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">1</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/katana.png" alt="arma tipo katana llamada Katana basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Katana basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">katana</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">8</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">11</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Katana</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo katana llamada Katana" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/katana.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">katana</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">8</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">9 - 11</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--epica">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/ballesta.png" alt="arma tipo ballesta llamada antiguo Ballesta del destino"
-            class="weapon-card__img" loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">antiguo Ballesta del destino</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">ballesta</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">epica</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">49</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">129</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">144</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+precision %</span>
-              <span class="weapon-mods__value">11</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">4</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">9</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">antiguo Ballesta del destino</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo ballesta llamada antiguo Ballesta del destino" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/ballesta.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">ballesta</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">epica</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">49</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">129 - 144</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% precisión</span>
+            <span class="weapon-mods__value">11</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">4</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">9</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/ballesta.png" alt="arma tipo ballesta llamada Ballesta basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Ballesta basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">ballesta</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">7</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Ballesta</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo ballesta llamada Ballesta" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/ballesta.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">ballesta</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">9</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">9 - 10</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">7</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/daga.png" alt="arma tipo daga llamada Daga basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Daga basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">daga</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">4</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Daga</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo daga llamada Daga" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/daga.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">daga</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">3</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">4 - 5</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/hacha.png" alt="arma tipo hacha llamada Hacha basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Hacha basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">hacha</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">17</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">32</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">42</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+velocidad ataque %</span>
-              <span class="weapon-mods__value">6</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">19</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Hacha</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo hacha llamada Hacha" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/hacha.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">hacha</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">17</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">32 - 42</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% velocidad ataque</span>
+            <span class="weapon-mods__value">6</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">19</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/arco.png" alt="arma tipo arco llamada Arco basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Arco basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">arco</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">0</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Arco</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo arco llamada Arco" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/arco.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">arco</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">1</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">0 - 1</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/maza.png" alt="arma tipo maza llamada Maza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Maza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">maza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">6</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">8</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Maza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo maza llamada Maza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/maza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">maza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">5</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">5 - 6</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">8</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/baston.png" alt="arma tipo baston llamada Baston basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Baston basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">baston</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">8</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+velocidad ataque %</span>
-              <span class="weapon-mods__value">4</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Baston</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo baston llamada Baston" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/baston.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">baston</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">5</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">8 - 9</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% velocidad ataque</span>
+            <span class="weapon-mods__value">4</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/lanza.png" alt="arma tipo lanza llamada Lanza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Lanza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">lanza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">8</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">14</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">16</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">4</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Lanza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo lanza llamada Lanza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/lanza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">lanza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">8</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">14 - 16</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">4</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/espada.png" alt="arma tipo espada llamada Espada basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Espada basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">espada</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">13</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">30</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">34</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+precision %</span>
-              <span class="weapon-mods__value">8</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Espada</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo espada llamada Espada" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/espada.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">espada</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">13</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">30 - 34</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% precisión</span>
+            <span class="weapon-mods__value">8</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/lanza.png" alt="arma tipo lanza llamada Lanza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Lanza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">lanza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">3</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Lanza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo lanza llamada Lanza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/lanza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">lanza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">2</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">1 - 2</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">3</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/lanza.png" alt="arma tipo lanza llamada Lanza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Lanza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">lanza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">7</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">11</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">13</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+precision %</span>
-              <span class="weapon-mods__value">6</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Lanza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo lanza llamada Lanza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/lanza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">lanza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">7</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">11 - 13</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% precisión</span>
+            <span class="weapon-mods__value">6</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/lanza.png" alt="arma tipo lanza llamada Lanza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Lanza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">lanza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">17</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">19</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">2</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Lanza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo lanza llamada Lanza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/lanza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">lanza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">10</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">17 - 19</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">2</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--epica">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/daga.png" alt="arma tipo daga llamada antiguo Daga del abismo" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">antiguo Daga del abismo</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">daga</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">epica</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">27</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">63</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">70</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">5</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+precision %</span>
-              <span class="weapon-mods__value">9</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">antiguo Daga del abismo</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo daga llamada antiguo Daga del abismo" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/daga.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">daga</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">epica</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">27</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">63 - 70</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">5</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% precisión</span>
+            <span class="weapon-mods__value">9</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/martillo.png" alt="arma tipo martillo llamada Martillo basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Martillo basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">martillo</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">15</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">26</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">29</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">4</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Martillo</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo martillo llamada Martillo" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/martillo.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">martillo</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">15</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">26 - 29</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">4</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/martillo.png" alt="arma tipo martillo llamada Martillo basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Martillo basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">martillo</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">21</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">24</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+velocidad ataque %</span>
-              <span class="weapon-mods__value">12</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Martillo</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo martillo llamada Martillo" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/martillo.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">martillo</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">10</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">21 - 24</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% velocidad ataque</span>
+            <span class="weapon-mods__value">12</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/arco.png" alt="arma tipo arco llamada Arco basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Arco basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">arco</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">23</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">36</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">41</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">8</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Arco</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo arco llamada Arco" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/arco.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">arco</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">23</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">36 - 41</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">8</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/ballesta.png" alt="arma tipo ballesta llamada Ballesta basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Ballesta basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">ballesta</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">19</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">33</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">39</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">7</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Ballesta</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo ballesta llamada Ballesta" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/ballesta.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">ballesta</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">19</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">33 - 39</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">7</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/hacha.png" alt="arma tipo hacha llamada Hacha basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Hacha basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">hacha</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">15</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">30</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">34</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">8</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Hacha</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo hacha llamada Hacha" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/hacha.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">hacha</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">15</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">30 - 34</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">8</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/baston.png" alt="arma tipo baston llamada Baston basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Baston basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">baston</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">13</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">16</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Baston</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo baston llamada Baston" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/baston.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">baston</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">10</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">10 - 13</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">16</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--rara">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/baston.png" alt="arma tipo baston llamada Baston basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Baston basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">baston</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">rara</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">19</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">22</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+velocidad ataque %</span>
-              <span class="weapon-mods__value">2</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Baston</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo baston llamada Baston" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/baston.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">baston</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">rara</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">10</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">19 - 22</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% velocidad ataque</span>
+            <span class="weapon-mods__value">2</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/espada.png" alt="arma tipo espada llamada Espada basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Espada basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">espada</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">7</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Espada</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo espada llamada Espada" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/espada.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">espada</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">7</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">9 - 10</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--epica">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/hacha.png" alt="arma tipo hacha llamada glacial Hacha de la luz"
-            class="weapon-card__img" loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">glacial Hacha de la luz</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">hacha</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">epica</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">29</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">82</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">112</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">8</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">6</span>
-            </li>
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">15</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">glacial Hacha de la luz</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo hacha llamada glacial Hacha de la luz" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/hacha.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">hacha</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">epica</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">29</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">82 - 112</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">8</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">6</span>
+          </li>
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">15</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/katana.png" alt="arma tipo katana llamada Katana basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Katana basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">katana</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">4</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">6</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+precision %</span>
-              <span class="weapon-mods__value">11</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Katana</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo katana llamada Katana" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/katana.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">katana</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">4</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">5 - 6</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% precisión</span>
+            <span class="weapon-mods__value">11</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/baston.png" alt="arma tipo baston llamada Baston basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Baston basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">baston</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Baston</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo baston llamada Baston" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/baston.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">baston</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">1</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">1 - 2</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/baston.png" alt="arma tipo baston llamada Baston basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Baston basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">baston</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">4</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+critico %</span>
-              <span class="weapon-mods__value">5</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Baston</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo baston llamada Baston" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/baston.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">baston</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">3</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">3 - 4</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% critico</span>
+            <span class="weapon-mods__value">5</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/maza.png" alt="arma tipo maza llamada Maza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Maza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">maza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">0</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+% dano</span>
-              <span class="weapon-mods__value">5</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Maza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo maza llamada Maza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/maza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">maza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">1</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">0 - 1</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% daño</span>
+            <span class="weapon-mods__value">5</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/katana.png" alt="arma tipo katana llamada Katana basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Katana basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">katana</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">14</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">16</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Katana</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo katana llamada Katana" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/katana.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">katana</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">10</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">14 - 16</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/martillo.png" alt="arma tipo martillo llamada Martillo basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Martillo basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">martillo</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Martillo</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo martillo llamada Martillo" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/martillo.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">martillo</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">2</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">1 - 2</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/arco.png" alt="arma tipo arco llamada Arco basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Arco basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">arco</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">0</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Arco</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo arco llamada Arco" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/arco.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">arco</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">1</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">0 - 1</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/ballesta.png" alt="arma tipo ballesta llamada Ballesta basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Ballesta basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">ballesta</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">11</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">13</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Ballesta</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo ballesta llamada Ballesta" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/ballesta.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">ballesta</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">9</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">11 - 13</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/martillo.png" alt="arma tipo martillo llamada Martillo basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Martillo basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">martillo</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">4</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">5</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Martillo</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo martillo llamada Martillo" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/martillo.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">martillo</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">3</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">3 - 4</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">5</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/hacha.png" alt="arma tipo hacha llamada Hacha basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Hacha basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">hacha</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">6</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">7</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Hacha</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo hacha llamada Hacha" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/hacha.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">hacha</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">5</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">6 - 7</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/espada.png" alt="arma tipo espada llamada Espada basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Espada basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">espada</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">4</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+velocidad ataque %</span>
-              <span class="weapon-mods__value">12</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Espada</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo espada llamada Espada" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/espada.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">espada</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">3</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">3 - 4</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% velocidad ataque</span>
+            <span class="weapon-mods__value">12</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/martillo.png" alt="arma tipo martillo llamada Martillo basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Martillo basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">martillo</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">1</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Martillo</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo martillo llamada Martillo" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/martillo.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">martillo</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">2</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">1 - 2</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/daga.png" alt="arma tipo daga llamada Daga basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Daga basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">daga</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">5</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">6</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Daga</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo daga llamada Daga" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/daga.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">daga</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">5</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">5 - 6</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/hacha.png" alt="arma tipo hacha llamada Hacha basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Hacha basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">hacha</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">13</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">15</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item weapon-mods__item--empty">
-              ninguno
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Hacha</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo hacha llamada Hacha" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/hacha.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">hacha</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">10</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">13 - 15</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item weapon-mods__item--empty">
+            ninguno
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/maza.png" alt="arma tipo maza llamada Maza basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Maza basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">maza</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">10</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">12</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">6</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Maza</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo maza llamada Maza" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/maza.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">maza</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">9</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">10 - 12</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">6</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/baston.png" alt="arma tipo baston llamada Baston basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Baston basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">baston</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">9</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">13</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">15</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">4</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Baston</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo baston llamada Baston" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/baston.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">baston</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">9</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">13 - 15</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">4</span>
+          </li>
+        </ul>
+      </section>
     </article>
     <article class="weapon-card weapon-card--comun">
-      <header class="weapon-card__header">
-        <figure class="weapon-card__image">
-          <img src="/img/weapons/hacha.png" alt="arma tipo hacha llamada Hacha basica" class="weapon-card__img"
-            loading="lazy">
-        </figure>
-        <h2 class="weapon-card__title">
-          arma: <span class="weapon-card__name">Hacha basica</span>
-        </h2>
-      </header>
-      <main class="weapon-card__body">
-        <section class="weapon-stats" aria-label="estadísticas del arma">
-          <dl class="weapon-stats__list">
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">tipo</dt>
-              <dd class="weapon-stats__value">hacha</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">rareza</dt>
-              <dd class="weapon-stats__value">comun</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">nivel</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño mínimo</dt>
-              <dd class="weapon-stats__value">2</dd>
-            </div>
-            <div class="weapon-stats__item">
-              <dt class="weapon-stats__label">daño máximo</dt>
-              <dd class="weapon-stats__value">3</dd>
-            </div>
-          </dl>
-        </section>
-        <section class="weapon-mods" aria-label="modificadores del arma">
-          <h3 class="weapon-mods__title">mods</h3>
-          <ul class="weapon-mods__list">
-            <li class="weapon-mods__item">
-              <span class="weapon-mods__name">+vida robada %</span>
-              <span class="weapon-mods__value">1</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <h2 class="weapon-card__title">
+        arma: <span class="weapon-card__name">Hacha</span>
+      </h2>
+      <figure class="weapon-card__image">
+        <img alt="arma tipo hacha llamada Hacha" class="weapon-card__img" loading="lazy"
+          src="static/img/weapons/hacha.png" />
+      </figure>
+      <section aria-label="estadísticas del arma" class="weapon-stats">
+        <dl class="weapon-stats__list">
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">tipo</dt>
+            <dd class="weapon-stats__value">hacha</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">rareza</dt>
+            <dd class="weapon-stats__value">comun</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">nivel</dt>
+            <dd class="weapon-stats__value">2</dd>
+          </div>
+          <div class="weapon-stats__item">
+            <dt class="weapon-stats__label">daño</dt>
+            <dd class="weapon-stats__value">2 - 3</dd>
+          </div>
+        </dl>
+      </section>
+      <section aria-label="modificadores del arma" class="weapon-mods">
+        <h3 class="weapon-mods__title">mods</h3>
+        <ul class="weapon-mods__list">
+          <li class="weapon-mods__item">
+            <span class="weapon-mods__name">+% vida robada</span>
+            <span class="weapon-mods__value">1</span>
+          </li>
+        </ul>
+      </section>
     </article>
   </section>
 </body>
+
 </html>
