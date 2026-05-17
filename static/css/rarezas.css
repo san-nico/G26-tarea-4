@@ -1,7 +1,7 @@
 /* COMÚN */
 .weapon-card {
+    /* flex: 1 1 0; */
     --gradient-base: #301e48;
-
     background:
         linear-gradient(
             45deg,
@@ -9,12 +9,9 @@
             var(--gradient-fin)
         ),
         url("../img/fondos/fondo-card.jpg");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-
     border: 2px var(--gradient-fin) solid;
     border-top: 10px var(--gradient-fin) solid;
 }
@@ -42,8 +39,6 @@
 
 }
 
-.glow-yellow {
-}
 
 @keyframes glowYellow {
   0% {
