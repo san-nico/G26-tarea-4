@@ -25,3 +25,7 @@ Este proyecto consiste en una landing page desplegada en GitHub Pages que presen
 ## Objetivo del proyecto
 
 Desarrollar una landing page funcional y escalable que permita representar información estructurada en formato de catálogo, aplicando principios básicos de desarrollo frontend y diseño modular.
+
+## Demo
+
+https://san-nico.github.io/G26-S1-tarea-4/
